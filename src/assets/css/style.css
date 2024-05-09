@@ -5,7 +5,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- :root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -19,7 +19,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #326DE7;
+  --primary: #FF6600;
   --secondary: #F2F1F8;
   --success: #28a745;
   --info: #17a2b8;
@@ -152,14 +152,13 @@ sup {
 }
 
 a {
-  color: #326DE7;
+  color: #FF6600;
   text-decoration: none;
   background-color: transparent;
 }
 
 a:hover {
-  color: #0C3FAB
-  ;
+  color: #b34700;
   text-decoration: underline;
 }
 
@@ -4075,7 +4074,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #326DE7;
+  background-color: #FF6600;
 }
 
 .nav-fill > .nav-link,
@@ -4742,8 +4741,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0.75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #0C3FAB
-  ;
+  color: #FF6600;
   background-color: #fff;
   border: 1px solid #dee2e6;
 }
@@ -4776,10 +4774,8 @@ input[type="button"].btn-block {
 .page-item.active .page-link {
   z-index: 3;
   color: #fff;
-  background-color: #0C3FAB
-  ;
-  border-color: #0C3FAB
-  ;
+  background-color: #FF6600;
+  border-color: #FF6600;
 }
 
 .page-item.disabled .page-link {
@@ -5167,7 +5163,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #326DE7;
+  background-color: #FF6600;
   transition: width 0.6s ease;
 }
 
@@ -5254,8 +5250,8 @@ a.badge-dark:focus, a.badge-dark.focus {
 .list-group-item.active {
   z-index: 2;
   color: #fff;
-  background-color: #326DE7;
-  border-color: #326DE7;
+  background-color: #FF6600;
+  border-color: #FF6600;
 }
 
 .list-group-item + .list-group-item {
@@ -6359,7 +6355,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #326DE7 !important;
+  background-color: #FF6600 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6487,12 +6483,11 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-  border-color: #326DE7 !important;
+  border-color: #FF6600 !important;
 }
 
 .border-secondary {
-  border-color: #0C3FAB
-  !important;
+  border-color: #F2F1F8 !important;
 }
 
 .border-success {
@@ -9530,7 +9525,7 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #326DE7 !important;
+  color: #FF6600 !important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -9777,7 +9772,7 @@ h6,
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #326DE7;
+  color: #FF6600;
 }
 
 @media (max-width: 991.98px) {
@@ -9822,7 +9817,7 @@ h6,
 }
 
 .carousel-indicators .active {
-  background: #326DE7;
+  background: #FF6600;
 }
 
 @media (max-width: 991.98px) {
@@ -9846,10 +9841,10 @@ h6,
   }
 }
 
-/* .page-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/page-header.jpg), no-repeat center center;
+.page-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/page-header.jpg), no-repeat center center;
   background-size: cover;
-} */
+}
 
 .cat-item img {
   transition: .5s;
@@ -9873,10 +9868,10 @@ h6,
   z-index: 1;
 }
 
-/* .bg-registration {
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/registration.jpg), no-repeat center center;
+.bg-registration {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/registration.jpg), no-repeat center center;
   background-size: cover;
-} */
+}
 
 .team-img .team-social {
   position: absolute;
