@@ -6097,7 +6097,7 @@ a.close.disabled {
   color: #6C6A74;
 }
 
-.carousel {
+/* .carousel {
   position: relative;
 }
 
@@ -6283,7 +6283,7 @@ a.close.disabled {
   padding-bottom: 20px;
   color: #fff;
   text-align: center;
-}
+} */
 
 @keyframes spinner-border {
   to {
@@ -9791,7 +9791,7 @@ h6,
   border-bottom: 1px solid #F2F1F8;
 }
 
-.carousel-caption {
+/* .carousel-caption {
   top: 0;
   left: 0;
   right: 0;
@@ -9844,7 +9844,7 @@ h6,
     font-size: 30px;
     font-weight: 700 !important;
   }
-}
+} */
 
 /* .page-header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/page-header.jpg), no-repeat center center;
