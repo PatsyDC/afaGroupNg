@@ -89,6 +89,10 @@ p {
   background-color: #F3F3F3; /* tono de gris personalizado */
 }
 
+.bg-footer{
+  background-color: #326DE7;
+}
+
 .img-bottom-margin {
   margin-bottom: 12px;
 }
