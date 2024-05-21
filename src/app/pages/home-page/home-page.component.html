@@ -8,9 +8,6 @@
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
-    <!-- Favicon -->
-    <link href="assets/img/logo1.png" rel="icon">
-
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,11 +16,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- FONT AWESOME LINK USING BOXICON -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
-      <!-- Carousel Start -->
-      <div id="header-carousel" class="carousel slide">
+    <!-- Carousel Start -->
+    <div id="header-carousel" class="carousel slide">
         <div class="carousel-inner">
             @for (carousel of carousels; track $index) {
                 <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
@@ -47,30 +47,30 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
-<!-- Carousel End -->
-
+    <!-- Carousel End -->
 
     <!-- empresas -->
     <div class="container-fluid py-3">
       <div class="container py-5">
           <div class="row align-items-center">
-              <h5 class="text-primary text-uppercase mb-3 text-center mx-auto" style="letter-spacing: 5px;">Nuestras marcas registradas</h5>
-              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
-                <div class="col text-center">
-                    <img src="assets/img/logo (1).jpg" class="img-fluid" alt="Imagen 1" style="width: 150px; height: 80px;">
-                </div>
-                <div class="col text-center">
-                    <img src="assets/img/logo (4).png" class="img-fluid" alt="Imagen 2" style="width: 150px; height: 80px;">
-                </div>
-                <div class="col text-center">
-                    <img src="assets/img/logo (3).png" class="img-fluid" alt="Imagen 3" style="width: 150px; height: 80px;">
-                </div>
-                <div class="col text-center">
-                    <img src="assets/img/logo (2).png" class="img-fluid" alt="Imagen 4" style="width: 150px; height: 80px;">
-                </div>
-            </div>
-
+            <h1 class="h-lineas">Nuestras marcas registradas</h1>
+            <p class="p-lineas">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse amet illo eos eligendi nobis nam aspernatur placeat.</p>
+            <div class="container-lineas">
+              <div class="row">
+                  <div class="col-md-6 col-lg-3">
+                      <img class="img-lineas" src="assets/img/logo (1).jpg">
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                      <img class="img-lineas" src="assets/img/logo (4).png">
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                      <img class="img-lineas" src="assets/img/logo (3).png">
+                  </div>
+                  <div class="col-md-6 col-lg-3">
+                      <img class="img-lineas" src="assets/img/logo (2).png">
+                  </div>
+              </div>
+          </div>
           </div>
           <br>
           <br>
@@ -127,77 +127,120 @@
           </div>
       </div>
     </div>
-
     <!-- empresas -->
 
     <!-- Te ofrecemos -->
-    <div class="container-fluid py-2 bg-custom-gray">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Te ofrecemos</h5>
-            </div>
-            <div class="row">
-              <div class="col-lg-4 col-md-6 mb-4">
-                <div class="rounded overflow-hidden mb-2">
-                  <div class="bg-secondary p-4">
-                    <img src="assets/img/cat-1.jpg" alt="" class="img-fluid img-bottom-margin">
-                        <h5 class="text-center">Fabricación Personalizada</h5>
-                        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla temporibus ipsam distinctio rem similique voluptatem illum.</p>
-                  </div>
-                </div>
-              </div>
+    <div class="wrapper-o">
+      <h1>Te ofrecemos</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Esse amet illo eos eligendi nobis nam aspernatur placeat.</p>
+          <div class="content-box">
+              <div class="card-o">
+                  <i class="bx bx-bar-chart-alt bx-md"></i>
+                  <h2>Fabricación Personalizada</h2>
+                <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore </p>
 
-              <div class="col-lg-4 col-md-6 mb-4">
-                <div class="rounded overflow-hidden mb-2">
-                  <div class="bg-secondary p-4">
-                    <img src="assets/img/cat-1.jpg" alt="" class="img-fluid img-bottom-margin">
-                        <h5 class="text-center">Servicio Mecánico</h5>
-                        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla temporibus ipsam distinctio rem similique voluptatem illum.</p>
-                  </div>
-                </div>
               </div>
-              <div class="col-lg-4 col-md-6 mb-4">
-                <div class="rounded overflow-hidden mb-2">
-                  <div class="bg-secondary p-4">
-                    <img src="assets/img/cat-1.jpg" alt="" class="img-fluid img-bottom-margin">
-                        <h5 class="text-center">AFA Rental</h5>
-                        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla temporibus ipsam distinctio rem similique voluptatem illum.</p>
-                  </div>
-                </div>
+              <div class="card-o">
+                  <i class="bx bx-laptop bx-md"></i>
+                  <h2>Servicio Mecánico</h2>
+                <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
+
               </div>
-              <div class="col-lg-4 col-md-6 mb-4">
-                <div class="rounded overflow-hidden mb-2">
-                  <div class="bg-secondary p-4">
-                    <img src="assets/img/cat-1.jpg" alt="" class="img-fluid img-bottom-margin">
-                        <h5 class="text-center">AFA Consultoria</h5>
-                        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla temporibus ipsam distinctio rem similique voluptatem illum.</p>
-                  </div>
-                </div>
+              <div class="card-o">
+                  <i class="bx bx-user bx-md"></i>
+
+                  <h2>AFA Rental</h2>
+              <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
+
               </div>
-              <div class="col-lg-4 col-md-6 mb-4">
-                <div class="rounded overflow-hidden mb-2">
-                  <div class="bg-secondary p-4">
-                    <img src="assets/img/cat-1.jpg" alt="" class="img-fluid img-bottom-margin">
-                        <h5 class="text-center">Servicio Post Venta</h5>
-                        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla temporibus ipsam distinctio rem similique voluptatem illum.</p>
-                  </div>
-                </div>
+              <div class="card-o">
+                  <i class="bx bx-mail-send bx-md"></i>
+                  <h2>AFA Consultoria</h2>
+                  <p> Iure ad fuga, voluptas nisi odit blanditiis aut culpa quasi. Expedita deleniti molestias hic
+                      numquam delectus!</p>
+
               </div>
-              <div class="col-lg-4 col-md-6 mb-4">
-                <div class="rounded overflow-hidden mb-2">
-                  <div class="bg-secondary p-4">
-                    <img src="assets/img/cat-1.jpg" alt="" class="img-fluid img-bottom-margin">
-                        <h5 class="text-center">Repuestos Multimarca</h5>
-                        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla temporibus ipsam distinctio rem similique voluptatem illum.</p>
-                  </div>
-                </div>
+              <div class="card-o">
+                  <i class="bx bx-bar-chart-alt bx-md"></i>
+                  <h2>Servicio Post Venta</h2>
+                  <p> Iure ad fuga, voluptas nisi odit blanditiis aut culpa quasi. Expedita deleniti molestias hic
+                      numquam delectus!</p>
+
               </div>
-            </div>
-        </div>
+              <div class="card-o">
+                  <i class="bx bx-paint bx-md"></i>
+                  <h2>Repuestos Multimarca</h2>
+                  <p> Iure ad fuga, voluptas nisi odit blanditiis aut culpa quasi. Expedita deleniti molestias hic
+                      numquam delectus!</p>
+
+              </div>
+          </div>
     </div>
     <!-- Te ofrecemos  -->
 
+    <!-- Visita -->
+    <div class="container-visita">
+      <div class="cont-all-visita">
+          <div class="container-texto-visita">
+              <h1 class="titulo-visita">Agenda tu visita en fundo</h1>
+              <p class="p-visita">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore est amet labore</p>
+              <button class="boton-visita">Contactáctanos</button>
+          </div>
+      </div>
+      <img src="assets/img/pulverizador.png" alt="" class="pulverizador-img">
+    </div>
+    <!-- Visita -->
 
+    <!-- Cartas -->
+      <div class="wrapper">
+        <div class="container-k" style="margin-top: 50px; margin-bottom: 50px;">
+          <i class="fas fa-tractor"></i>
+          <span class="num" #num [attr.data-val]="400">260</span>
+          <span class="text">Maquinarias trabajando</span>
+        </div>
+
+        <div class="container-k" style="margin-top: 50px; margin-bottom: 50px;">
+          <i class="fas fa-smile-beam"></i>
+          <span class="num" #num [attr.data-val]="340">25</span>
+          <span class="text">Diseños propios</span>
+        </div>
+
+        <div class="container-k" style="margin-top: 50px; margin-bottom: 50px;">
+          <i class="fas fa-paint-brush"></i>
+          <span class="num" #num [attr.data-val]="225">765</span>
+          <span class="text">Clientes atendidos</span>
+        </div>
+
+        <div class="container-k" style="margin-top: 50px; margin-bottom: 50px;">
+          <i class="fas fa-calendar-alt"></i>
+          <span class="num" #num [attr.data-val]="280">12</span>
+          <span class="text">Años de experiencia</span>
+        </div>
+      </div>
+    <!-- cartas -->
+
+    <!-- Certificados -->
+    <h1 class="certi">Certificados y reconocimientos</h1>
+    <div class="allcertificado">
+        <div class="containercerti">
+            <h3 class="h3-certi">Certificado de Homologación</h3>
+            <img class="img-certi" src="assets/img/certi2.png" alt="">
+            <p class="p-certi">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤEn AFA GROUP, nos enorgullece ser un Proveedor Homologado bajo los más altos estándares de calidad.
+              Este reconocimiento avala nuestro compromiso con la excelencia en todo lo que hacemos. Esto se traduce en: la entrega de productos y servicios de primer nivel,
+              minimización de riesgos con problemas de calidad, retrasos o incumplimientos, así como una mayor productividad de nuestros clientes al proporcionarles soluciones innovadoras y de ultima vanguradia tecnológica.
+
+              En AFA GROUP, su éxito es nuestra prioridad.</p>
+        </div>
+
+        <div class="containercerti">
+          <h3 class="h3-certi">Reconocimiento empresa del año 2022</h3>
+          <img class="img-certi" src="assets/img/certi.png" alt="">
+          <p class="p-certi">Nos llena de orgullo anunciar que hemos sido galardonados con el prestigioso premio Empresa del Año 2022 en la industria de maquinaria, repuestos y servicios para la agroindustria. Este reconocimiento representa un hito importante en nuestra trayectoria y es un homenaje a la dedicación y el trabajo duro de todo nuestro equipo. A lo largo de los años, nos hemos consolidado como un socio estratégico para las empresas agroindustriales, brindándoles las herramientas y el soporte que necesitan para optimizar sus operaciones, aumentar su productividad y alcanzar sus metas de negocio.
+            Queremos expresar nuestro más profundo agradecimiento a nuestros clientes por su confianza y continuo apoyo. Su satisfacción es nuestra principal prioridad y nos motiva a seguir mejorando cada día.</p>
+        </div>
+
+    </div>
+    <!-- certificados -->
     <!-- Registration Start -->
     <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
         <div class="container py-5">
@@ -248,6 +291,7 @@
         </div>
     </div>
     <!-- Registration End -->
+
 
 
     <!-- Team Start -->
@@ -481,17 +525,6 @@
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-  <!-- JavaScript Libraries -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-
-  <!-- Contact Javascript File -->
-  <script src="mail/contact.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Template Javascript -->
-  <script src="js/main.js"></script>
-
 </body>
 <script>
   // Espera a que el DOM esté completamente cargado
@@ -507,4 +540,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+<script>
+  let valueDisplays = document.querySelectorAll(".num");
+let interval = 4000;
+
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0;
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = Math.floor(interval / endValue);
+  let counter = setInterval(function () {
+    startValue += 1;
+    valueDisplay.textContent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
+});
+</script>
+
 </html>
+
+

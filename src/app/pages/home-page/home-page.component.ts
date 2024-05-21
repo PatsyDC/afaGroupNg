@@ -1,4 +1,4 @@
-import { Component, NgModule, OnInit } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild, OnInit, QueryList, ViewChildren} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,8 +6,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css']
 })
-export class HomePageComponent{
-
+export class HomePageComponent implements AfterViewInit {
   carousels = [
     {
       img: 'assets/img/1.1.png',
@@ -29,5 +28,23 @@ export class HomePageComponent{
     },
   ];
 
-}
+  @ViewChildren('num') valueDisplays?: QueryList<ElementRef>;
+  interval = 4000;
 
+  ngAfterViewInit() {
+    this.valueDisplays?.forEach((valueDisplayRef) => {
+      let valueDisplay = valueDisplayRef.nativeElement;
+      let startValue = 0;
+      let endValue = parseInt(valueDisplay.getAttribute('data-val'));
+      let duration = Math.floor(this.interval / endValue);
+      let counter = setInterval(() => {
+        startValue += 1;
+        valueDisplay.textContent = startValue;
+        if (startValue == endValue) {
+          clearInterval(counter);
+        }
+      }, duration);
+    });
+  }
+
+};
