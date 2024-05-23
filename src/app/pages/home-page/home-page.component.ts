@@ -1,12 +1,19 @@
 import { Component, AfterViewInit, ElementRef, ViewChild, OnInit, QueryList, ViewChildren} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  styleUrls: ['./home-page.component.css'],
+  animations: [
+
+  ]
 })
-export class HomePageComponent implements AfterViewInit {
+export class HomePageComponent   {
+
+  contador!: FormGroup;
+  contador1:number = 0;
   carousels = [
     {
       img: 'assets/img/1.1.png',
@@ -27,24 +34,5 @@ export class HomePageComponent implements AfterViewInit {
       parrafo: 'Duo nonumy et dolor tempor no et. Diam sit diam sit diam erat',
     },
   ];
-
-  @ViewChildren('num') valueDisplays?: QueryList<ElementRef>;
-  interval = 4000;
-
-  ngAfterViewInit() {
-    this.valueDisplays?.forEach((valueDisplayRef) => {
-      let valueDisplay = valueDisplayRef.nativeElement;
-      let startValue = 0;
-      let endValue = parseInt(valueDisplay.getAttribute('data-val'));
-      let duration = Math.floor(this.interval / endValue);
-      let counter = setInterval(() => {
-        startValue += 1;
-        valueDisplay.textContent = startValue;
-        if (startValue == endValue) {
-          clearInterval(counter);
-        }
-      }, duration);
-    });
-  }
 
 };
