@@ -95,12 +95,18 @@ p {
 }
 
 /* cartas  */
+
 .wrapper {
   display: flex;
   justify-content: space-around;
   gap: 10px;
   background: #fafafa;
+  flex-wrap: wrap; /* To allow wrapping */
+  width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho del viewport */
+  padding: 0 10px; /* Padding horizontal para evitar que el contenido toque los bordes */
+  box-sizing: border-box;
 }
+
 .container-k {
   width: 28vmin;
   height: 28vmin;
@@ -113,25 +119,22 @@ p {
   border-radius: 0.5em;
   background-color: #ffffff;
   border-bottom: 10px solid #326DE7;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Aquí añadimos la sombra de borde */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .container-k:hover {
-  background-color: #326DE7;; /* Cambiar el color de fondo al hacer hover */
-  border-color: #326DE7;; /* Cambiar el color del borde al hacer hover */
-  transform: translateY(-5px); /* Otra opción, mover ligeramente hacia arriba al hacer hover */
+  background-color: #326DE7;
+  border-color: #326DE7;
+  transform: translateY(-5px);
 }
 .container-k:hover i {
-  color: #ffffff; /* Cambiar el color del icono al hacer hover */
+  color: #ffffff;
 }
-
 .container-k:hover .num {
-  color: #ffffff; /* Cambiar el color del número al hacer hover */
+  color: #ffffff;
 }
-
 .container-k:hover .text {
-  color: #ffffff; /* Cambiar el color del texto al hacer hover */
+  color: #ffffff;
 }
-
 i {
   color: #326DE7;
   font-size: 2.5em;
@@ -148,42 +151,66 @@ span.text {
   color: #707070;
   font-size: 1em;
   text-align: center;
-  pad: 0.7em 0;
+  padding: 0.7em 0;
   font-weight: 400;
   line-height: 0;
 }
 @media screen and (max-width: 1024px) {
   .wrapper {
-    width: 85vw;
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho del viewport */
+    padding: 0 10px;
   }
   .container-k {
     height: 26vmin;
     width: 26vmin;
     font-size: 12px;
   }
+  span.num {
+    font-size: 2.5em;
+  }
+  span.text {
+    font-size: 0.9em;
+  }
 }
 @media screen and (max-width: 768px) {
   .wrapper {
-    width: 90vw;
-    flex-wrap: wrap;
+    width: 100%;
     gap: 30px;
+    justify-content: center;
+    padding: 0 10px;
   }
   .container-k {
     width: calc(50% - 40px);
     height: 30vmin;
     font-size: 14px;
   }
+  span.num {
+    font-size: 2.5em;
+  }
+  span.text {
+    font-size: 0.9em;
+  }
 }
 @media screen and (max-width: 480px) {
   .wrapper {
+    width: 100%;
     gap: 15px;
+    justify-content: center;
+    padding: 0 10px;
   }
   .container-k {
-    width: 100%;
-    height: 25vmin;
-    font-size: 8px;
+    width: calc(50% - 15px);
+    height: 30vmin;
+    font-size: 12px;
+  }
+  span.num {
+    font-size: 2.2em;
+  }
+  span.text {
+    font-size: 0.8em;
   }
 }
+
 /*  */
 
 /* marcas registradas */
@@ -271,7 +298,7 @@ span.text {
   background: #FFFFFF;
   color: #22B573;
   transition: .5s;
-
+  margin-top: 20px;
 }
 
 .p-caja {
@@ -306,8 +333,6 @@ span.text {
 
 /*  */
 /* te ofrecemos */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -325,54 +350,55 @@ span.text {
     font-size: 3em;
     margin: 25px;
 }
-.content-box{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 1000px;
-    margin-top: 30px;
+.content-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%; /* Ajustamos el ancho para que se adapte mejor */
+  max-width: 1000px; /* Limitamos el ancho máximo */
+  margin-top: 30px;
 }
 .card-o{
-    min-height: 220px;
-    width: 320px;
-    padding: 30px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background: #fff;
-    margin: 10px 4px;
-    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+  min-height: 180px; /* Reducimos la altura */
+  width: calc(50% - 20px); /* Dos cartas por fila con margen */
+  padding: 20px; /* Reducimos el padding */
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  margin: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 .card-o i{
     margin: 20px;
     color: #326DE7; /* Cambiado a azul */
 }
 .card-o h3{
-    margin-bottom: 12px;
-    font-weight: 400;
-    text-align: center;
+  margin-bottom: 8px; /* Reducimos el margen */
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.2em; /* Reducimos el tamaño de la fuente */
 }
 .card-o p{
     color: #6c757d;
     text-align: center;
+    font-size: 0.9em; /* Reducimos el tamaño de la fuente */
 }
 .card-o:hover i,
 .card-o:hover p{
     color: #fff;
 }
-.card-o:hover h2{
+.card-o:hover h3{
     font-weight: 600;
     color: #fff;
 }
 .card-o:nth-child(1):hover{
     background: #326DE7;
-                                    background-size: cover;
 }
 .card-o:nth-child(2):hover{
     background: #326DE7;
-                                    background-size: cover;
 }
 .card-o:nth-child(3):hover{
     background: #326DE7;
@@ -386,22 +412,12 @@ span.text {
 .card-o:nth-child(6):hover{
     background: #326DE7;
 }
-@media(max-width:991px){
-    .wrapper{
-        padding: 25px;
-    }
-    .wrapper h1{
-        font-size: 2.5em;
-        font-weight: 600;
-    }
-    .content-box{
-        flex-direction: column;
-        width: 100%;
-    }
-    .card{
-        min-width: 300px;
-        margin: 10px auto;
-    }
+@media (max-width: 991px) {
+  .card-o {
+      width: calc(50% - 20px); /* Dos cartas por fila en dispositivos más pequeños */
+  }
+
+
 }
 /*  */
 
@@ -559,9 +575,14 @@ h1.certi {
 
 /* Noticias*/
 .containernoticia {
-  margin: 0;
-  padding: 0;
+  background: #fafafa;
+
+
   display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  overflow-x: hidden;
   overflow-x: auto;
   padding: 20px;
   gap: 20px;
@@ -569,7 +590,6 @@ h1.certi {
   box-sizing: border-box;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  justify-content: center;
 }
 
 .noticia {
@@ -583,6 +603,14 @@ h1.certi {
   transition: transform 0.2s;
   scroll-snap-align: center;
 }
+
+.title-noticia {
+  font-size: 24px; /* Tamaño de fuente del título */
+  font-weight: bold;
+  margin-bottom: 20px; /* Espacio debajo del título */
+  text-align: center;
+}
+
 
 .noticia:hover {
   transform: scale(1.05);
