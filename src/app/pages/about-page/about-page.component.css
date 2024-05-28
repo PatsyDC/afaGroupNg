@@ -11,7 +11,7 @@
 
 .about-1 h1 {
   text-align: center;
-  color: #326DE7; 
+  color: #326DE7;
   font-weight: lighter;
 }
 
@@ -79,6 +79,85 @@
   color: #326DE7;
   padding-bottom: 1.5rem;
 }
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.card {
+  width: 270px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card-content p {
+  color: #666;
+  font-size: 12px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+/* Media query para tabletas */
+@media (max-width: 768px) {
+  .card {
+      width: calc(33.33% - 20px);
+      margin: 10px;
+  }
+
+  .card-content {
+      padding: 20px;
+  }
+
+  .card-content h3 {
+      font-size: 18px;
+  }
+
+  .card-content p {
+      font-size: 12px;
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 576px) {
+  .card {
+      width: calc(50% - 20px);
+  }
+
+  .card-content {
+      padding: 15px;
+  }
+
+  .card-content h3 {
+      font-size: 16px;
+  }
+
+  .card-content p {
+      font-size: 11px;
+  }
+}
+
 
 
 @media (max-width: 768px) {
