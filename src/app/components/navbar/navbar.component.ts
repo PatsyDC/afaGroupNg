@@ -16,6 +16,10 @@ export class NavbarComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  openMenu() {
+    this.isMenuOpen = true;
+  }
+
   closeMenu() {
     this.isMenuOpen = false;
   }

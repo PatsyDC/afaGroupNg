@@ -22,7 +22,6 @@ a {
   background-color: transparent !important;
 }
 
-
 a:hover {
   color: #0C3FAB;
   text-decoration: underline;
@@ -72,7 +71,6 @@ a:hover {
   background-color: transparent;
 }
 
-
 .navbar-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
@@ -90,6 +88,19 @@ a:hover {
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
+}
+
+/* Asegúrate de que el menú se oculte por defecto */
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Mostrar el menú cuando tiene la clase 'show' */
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
 }
 
 /* Responsive Behavior */
@@ -123,105 +134,90 @@ a:hover {
   }
 
   .navbar-expand-lg .navbar-toggler {
-    display: none;
+    display: none !important;
   }
 }
 
-/* Estilos adicionales para pantallas pequeñas */
+/* Additional Styles for Small Screens */
 @media (max-width: 991.98px) {
-  /* Cambia el fondo y el color del texto del botón de hamburguesa en pantallas pequeñas */
   .navbar-toggler {
-    border-color: #fff; /* Cambia el color del borde */
-    color: #000; /* Cambia el color del texto */
+    border-color: #fff; /* Change border color */
+    color: #000; /* Change text color */
   }
 
-  /* Estilo para el navbar en pantallas pequeñas */
   .navbar-collapse {
-
-    padding: 1rem; /* Añade espacio alrededor de los elementos del navbar */
-    border-radius: 0.5rem; /* Añade bordes redondeados al navbar */
+    padding: 1rem; /* Add padding around navbar elements */
+    border-radius: 0.5rem; /* Add rounded borders to navbar */
   }
 
-  /* Estilo para los elementos de navegación en pantallas pequeñas */
   .navbar-nav .nav-item {
-    padding: 0.5rem 0; /* Ajusta el espacio entre los elementos de navegación */
+    padding: 0.5rem 0; /* Adjust space between navbar items */
   }
 
-  /* Estilo para los enlaces de navegación en pantallas pequeñas */
   .navbar-nav .nav-link {
-    padding: 0.5rem 0; /* Ajusta el espacio alrededor de los enlaces de navegación */
+    padding: 0.5rem 0; /* Adjust space around navbar links */
   }
 }
 
-/* Oculta el input del checkbox */
+/* Hide the checkbox input */
 .navbar-toggler.visually-hidden {
   display: none;
 }
 
-/* Estilo para el botón de hamburguesa */
 .navbar-toggler-icon {
   cursor: pointer;
 }
 
-/* Estilo para el navbar en pantallas pequeñas */
+/* Hide the navbar in small screens when the checkbox is not checked */
 @media (max-width: 991.98px) {
-  /* Oculta el navbar cuando el checkbox está marcado */
   #toggleNavbar:not(:checked) ~ .collapse.navbar-collapse {
     display: none;
   }
 
-  /* Muestra el navbar cuando el checkbox está marcado */
   #toggleNavbar:checked ~ .collapse.navbar-collapse {
     display: block;
   }
 
-  /* Estilo para el navbar en pantallas pequeñas */
   .collapse.navbar-collapse {
-    padding: 1rem; /* Añade espacio alrededor de los elementos del navbar */
-    border-radius: 0.5rem; /* Añade bordes redondeados al navbar */
+    padding: 1rem;
+    border-radius: 0.5rem;
   }
 
-  /* Estilo para los elementos de navegación en pantallas pequeñas */
   .navbar-nav .nav-item {
-    padding: 0.5rem 0; /* Ajusta el espacio entre los elementos de navegación */
+    padding: 0.5rem 0;
   }
 
-  /* Estilo para los enlaces de navegación en pantallas pequeñas */
   .navbar-nav .nav-link {
-    padding: 0.5rem 0; /* Ajusta el espacio alrededor de los enlaces de navegación */
+    padding: 0.5rem 0;
   }
 }
 
-/* Agrega estos estilos al final de tu archivo CSS */
-
-/* Estilo para el contenedor de la barra de navegación */
+/* Navbar container styling */
 .container-fluid.navbar-container {
-  background-color: transparent; /* Establece el fondo transparente */
+  background-color: transparent;
 }
 
-/* Estilo para los enlaces de navegación */
+/* Navbar links */
 .navbar-nav .nav-link {
-  border-bottom: none; /* Elimina la línea inferior */
+  border-bottom: none;
 }
 
-/* Estilo para el fondo de la barra de navegación en pantallas grandes */
+/* Transparent background for navbar on large screens */
 @media (min-width: 992px) {
   .navbar-expand-lg.bg-light {
-    background-color: transparent; /* Establece el fondo transparente */
+    background-color: transparent;
   }
 }
 
-/* Estilo para el fondo de la barra de navegación en pantallas pequeñas */
+/* Transparent background for navbar on small screens */
 @media (max-width: 991.98px) {
   .navbar-expand-lg.bg-light .navbar-collapse {
-    background-color: transparent; /* Establece el fondo transparente */
+    background-color: transparent;
   }
 }
 
-
-/* Estilo para los enlaces de navegación */
 .navbar-nav .nav-link {
-  border-bottom: none; /* Elimina la línea inferior */
+  border-bottom: none;
 }
 
 @media (min-width: 992px) {
@@ -229,29 +225,26 @@ a:hover {
     display: none;
   }
 }
-/* Oculta el botón de hamburguesa en pantallas grandes */
+
+/* Hide the hamburger button on large screens */
 @media (min-width: 992px) {
   .navbar-toggler {
     display: none !important;
   }
 }
-/* Estilo para los enlaces de navegación en pantallas pequeñas */
+
+/* Navbar links on small screens */
 @media (max-width: 991.98px) {
   .navbar-nav .nav-link {
-    text-align: center; /* Centra el texto */
-    padding: 0.5rem 0; /* Ajusta el espacio alrededor de los enlaces de navegación */
-    color: #326DE7 !important; /* Añade !important para asegurar la especificidad */
-    transition: color 0.3s ease; /* Agrega una transición suave */
-
+    text-align: center;
+    padding: 0.5rem 0;
+    color: #326DE7 !important;
+    transition: color 0.3s ease;
   }
 
   .navbar-nav .nav-link:hover {
-    color: white !important; /* Cambia el color del texto en hover */
+    color: white !important;
     text-decoration: underline;
-    background-color: #326DE7 !important;/* Subraya el texto en hover */
+    background-color: #326DE7 !important;
   }
 }
-
-
-
-

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, ElementRef, ViewChild, OnInit, QueryList, ViewChildren} from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
@@ -16,22 +16,22 @@ export class HomePageComponent   {
   contador1:number = 0;
   carousels = [
     {
-      img: 'assets/img/1.1.png',
-      title: 'No hay',
-      subtitle: 'Terreno',
-      parrafo: 'Difícil',
+      img: 'assets/img/slider1.png',
+      title: 'NO HAY',
+      subtitle: 'TERRENO',
+      parrafo: 'DIFICIL',
     },
     {
-      img: 'assets/img/slider.jpeg',
-      title: 'Los mejores animales',
-      subtitle: 'Una mascota que te dará felicidad',
-      parrafo: 'Duo nonumy et dolor tempor no et. Diam sit diam sit diam erat',
+      img: 'assets/img/slider2.jpg',
+      title: 'NO HAY',
+      subtitle: 'TERRENO',
+      parrafo: 'DIFICIL',
     },
     {
-      img: 'assets/img/1.1.png',
-      title: 'Los mejores animales',
-      subtitle: 'Una mascota que te dará felicidad',
-      parrafo: 'Duo nonumy et dolor tempor no et. Diam sit diam sit diam erat',
+      img: 'assets/img/slider3.png',
+      title: 'NO HAY',
+      subtitle: 'TERRENO',
+      parrafo: 'DIFICIL',
     },
   ];
 

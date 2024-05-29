@@ -23,34 +23,28 @@
 
 <body>
     <!-- Carousel Start -->
-    <div id="header-carousel" class="carousel slide">
-        <div class="carousel-inner">
-            @for (carousel of carousels; track $index) {
-                <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                    <img class="d-block w-100" src="{{carousel.img}}" alt="Image" style="object-fit: cover;">
-                    <div class="carousel-caption d-flex flex-column align-items-end justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h3 class="text-white mb-3 d-none d-sm-block">{{carousel.title}}</h3>
-                            <h1 class="display-3 text-white mb-3">{{carousel.subtitle}}</h1>
-                            <h5 class="text-white mb-3 d-none d-sm-block">{{carousel.parrafo}}</h5>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    <div class="slider-container">
+      <div class="slider" #slider>
+        @for (carousel of carousels; track $index) {
+          <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+            <div class="slide">
+              <img src="{{carousel.img}}" alt="Slide 1">
+              <div class="slide-text">
+                <h2>{{carousel.title}} <br><span>{{carousel.subtitle}}</span> <br> {{carousel.parrafo}}</h2>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="controls">
+        <button class="prev-btn" #prevBtn>&lt;</button>
+        <button class="next-btn" #nextBtn>&gt;</button>
+      </div>
     </div>
     <!-- Carousel End -->
 
     <!-- empresas -->
-    <div class="container-fluid py-3">
+    <div class="container-fluid py-3" style="margin-top: 1rem;">
       <div class="container py-5">
           <div class="row align-items-center">
             <h1 class="h-lineas">Nuestras marcas registradas</h1>
