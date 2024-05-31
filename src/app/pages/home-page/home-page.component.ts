@@ -23,7 +23,7 @@ export class HomePageComponent   {
     },
     {
       img: 'assets/img/slider2.jpg',
-      title: 'NO HAY',
+      title: 'NO',
       subtitle: 'TERRENO',
       parrafo: 'DIFICIL',
     },
