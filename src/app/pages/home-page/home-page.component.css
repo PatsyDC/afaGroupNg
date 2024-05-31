@@ -90,7 +90,7 @@ p {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  height: 100vh;
+  height: 85vh;
   margin-bottom: 0;
 }
 
@@ -933,10 +933,45 @@ select {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bff; /* Color principal del botón */
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: #004085; /* Color de fondo al hacer clic */
+  border-color: #003366; /* Color del borde al hacer clic */
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Enfatiza el foco */
 }
 
 button:not(:disabled),
@@ -999,9 +1034,26 @@ progress {
   height: auto;
 }
 
-[type="search"] {
+input[type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none;
+  appearance: none; /* La propiedad estándar sin prefijo */
+  border: 1px solid #ccc; /* Borde personalizado */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 5px 10px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  background-color: #f9f9f9; /* Color de fondo */
+  color: #333; /* Color del texto */
+  transition: border-color 0.3s ease; /* Transición para el color del borde */
+}
+
+input[type="search"]:focus {
+  border-color: #007bff; /* Color del borde al enfocar */
+  outline: none; /* Elimina el borde de enfoque predeterminado */
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  appearance: none; /* La propiedad estándar sin prefijo */
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -4223,7 +4275,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -10389,7 +10441,7 @@ h6,
   border-bottom: 1px solid #F2F1F8;
 }
 
-/* .carousel-caption {
+.carousel-caption {
   top: 0;
   left: 0;
   right: 0;
@@ -10447,7 +10499,7 @@ h6,
 /* .page-header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/page-header.jpg), no-repeat center center;
   background-size: cover;
-} */
+}
 
 .cat-item img {
   transition: .5s;
