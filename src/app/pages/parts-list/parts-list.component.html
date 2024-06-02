@@ -1,116 +1,23 @@
-
 <div class="container">
   <div class="card">
-       <div class="content">
-           <img src="img/repuestos1.jpg" alt="">
-           <div class="text">
-               <h3>TANQUES DE POLIETILENO Y PARTES</h3>
-               <div class="icon">
-                   <i class="bx bxs-star"></i>
-                   <i class="bx bxs-star"></i>
-                   <i class="bx bxs-star"></i>
-                   <i class="bx bxs-star"></i>
-                   <i class="bx bxs-star-half"></i>
-               </div>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, quod. Explicabo, iusto!</p>
-           </div>
-       </div>
+    <div class="content">
+      <!-- Utilizamos *ngFor para iterar sobre la lista de productos -->
+      <div *ngFor="let catalogo of productos; let i = index; trackBy: trackByFn">
+        <img [src]="catalogo.img" alt="">
+        <div class="text">
+          <h3>{{ catalogo.nombre }}</h3>
+          <div class="icon">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+          </div>
+          <p>{{ catalogo.descripcion }}</p>
+          <p>{{ catalogo.precio }}</p>
+        </div>
+      </div>
+      <!-- Fin del bucle *ngFor -->
+    </div>
   </div>
-  <div class="card">
-       <div class="content">
-           <img src="img/boquillas.jpg" alt="">
-           <div class="text">
-               <h3>BOQUILLAS</h3>
-               <div class="icon">
-                   <i class="bx bxs-star"></i>
-                   <i class="bx bxs-star"></i>
-                   <i class="bx bxs-star"></i>
-                   <i class="bx bxs-star"></i>
-                   <i class="bx bxs-star-half"></i>
-               </div>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, quod. Explicabo, iusto!</p>
-           </div>
-       </div>
-  </div>
-  <div class="card">
-   <div class="content">
-       <img src="img/portaboquillas.jpg" alt="">
-       <div class="text">
-           <h3>PORTABOQUILLAS</h3>
-           <div class="icon">
-               <i class="bx bxs-star"></i>
-               <i class="bx bxs-star"></i>
-               <i class="bx bxs-star"></i>
-               <i class="bx bxs-star"></i>
-               <i class="bx bxs-star-half"></i>
-           </div>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, quod. Explicabo, iusto!</p>
-       </div>
-   </div>
-</div>
-<div class="card">
-<div class="content">
-   <img src="img/manguera.jpg" alt="">
-   <div class="text">
-       <h3>MANGUERAS</h3>
-       <div class="icon">
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star-half"></i>
-       </div>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, quod. Explicabo, iusto!</p>
-   </div>
-</div>
-</div>
-<div class="card">
-<div class="content">
-   <img src="img/manguera.jpg" alt="">
-   <div class="text">
-       <h3>MANGUERAS</h3>
-       <div class="icon">
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star-half"></i>
-       </div>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, quod. Explicabo, iusto!</p>
-   </div>
-</div>
-</div>
-<div class="card">
-<div class="content">
-   <img src="img/repuestos1.jpg" alt="">
-   <div class="text">
-       <h3>TANQUES DE POLIETILENO Y PARTES</h3>
-       <div class="icon">
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star-half"></i>
-       </div>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, quod. Explicabo, iusto!</p>
-   </div>
-</div>
-</div>
-<div class="card">
-<div class="content">
-   <img src="img/boquillas.jpg" alt="">
-   <div class="text">
-       <h3>BOQUILLAS</h3>
-       <div class="icon">
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star"></i>
-           <i class="bx bxs-star-half"></i>
-       </div>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, quod. Explicabo, iusto!</p>
-   </div>
-</div>
-</div>
-  <!-- Repite este bloque de cartas para completar las cuatro -->
 </div>
