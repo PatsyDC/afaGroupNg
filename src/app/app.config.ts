@@ -4,7 +4,11 @@ import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-br
 
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(), provideAnimations()]
+  providers: [provideRouter(routes), provideClientHydration(), provideAnimations(),
+  provideHttpClient()
+  ]
+
 };

@@ -2,7 +2,8 @@
   <div class="card">
     <div class="content">
       <!-- Utilizamos *ngFor para iterar sobre la lista de productos -->
-      <div *ngFor="let catalogo of productos; let i = index; trackBy: trackByFn">
+      @for (catalogo of productos; track $index) {
+        <div>
         <img [src]="catalogo.img" alt="">
         <div class="text">
           <h3>{{ catalogo.nombre }}</h3>
@@ -17,6 +18,8 @@
           <p>{{ catalogo.precio }}</p>
         </div>
       </div>
+      }
+
       <!-- Fin del bucle *ngFor -->
     </div>
   </div>

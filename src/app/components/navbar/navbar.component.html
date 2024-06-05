@@ -56,25 +56,24 @@
         <label for="toggleNavbar" class="navbar-toggler-icon d-lg-none">&#9776;</label>
         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
           <div class="navbar-nav py-0">
-            <a href="/"  class="nav-item nav-link active">Inicio</a>
-            <a href="/about-us"  class="nav-item nav-link">Nosotros</a>
-            <a href="/parts-list"  class="nav-item nav-link">Repuestos</a>
-            <a href="/equipment-list" class="nav-item nav-link">Equipos</a>
-            <div class="nav-item dropdown" (mouseenter)="openMenu()" (mouseleave)="closeMenu()">
-              <a (click)="toggleMenu()" class="nav-link dropdown-toggle">Servicios</a>
-              <div [ngClass]="{'show': isMenuOpen}" class="dropdown-menu">
-                <a href="/" class="dropdown-item">Fabricación</a>
-                <a href="/about-us" class="dropdown-item">Servicio Mecánico</a>
-                <a href="/about-us" class="dropdown-item">AFA Rental</a>
-                <a href="/about-us" class="dropdown-item">AFA Consultoria</a>
-                <a href="/about-us" class="dropdown-item">AFA Servicio Post Venta</a>
-                <a href="/about-us" class="dropdown-item">AFA Créditos</a>
+            <a routerLink="/"  class="nav-item nav-link active">Inicio</a>
+            <a routerLink="/about-us"  class="nav-item nav-link">Nosotros</a>
+            <a routerLink="/parts-list"  class="nav-item nav-link">Repuestos</a>
+            <a routerLink="/equipment-list" class="nav-item nav-link">Equipos</a>
+            <div class="nav-item dropdown" (mouseenter)="openMenu()">
+              <a class="nav-link dropdown-toggle">Servicios</a>
+              <div [ngClass]="{'show': isMenuOpen}" class="dropdown-menu" (mouseleave)="closeMenu()">
+                <a routerLink="/" class="dropdown-item">Fabricación</a>
+                <a routerLink="/about-us" class="dropdown-item">Servicio Mecánico</a>
+                <a routerLink="/about-us" class="dropdown-item">AFA Rental</a>
+                <a routerLink="/about-us" class="dropdown-item">AFA Consultoria</a>
+                <a routerLink="/about-us" class="dropdown-item">AFA Servicio Post Venta</a>
+                <a routerLink="/about-us" class="dropdown-item">AFA Créditos</a>
               </div>
             </div>
-
-            <a href="/shop" class="nav-item nav-link">Tienda</a>
-            <a href="/blog" class="nav-item nav-link">Blog</a>
-            <a href="/contact" class="nav-item nav-link">Contact</a>
+            <a routerLink="/shop" class="nav-item nav-link">Tienda</a>
+            <a routerLink="/blog" class="nav-item nav-link">Blog</a>
+            <a routerLink="/contact" class="nav-item nav-link">Contact</a>
           </div>
         </div>
       </nav>

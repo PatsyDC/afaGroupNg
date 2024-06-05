@@ -92,14 +92,12 @@ a:hover {
 
 /* Asegúrate de que el menú se oculte por defecto */
 .dropdown-menu {
-  display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 /* Mostrar el menú cuando tiene la clase 'show' */
 .dropdown-menu.show {
-  display: block;
   opacity: 1;
 }
 
